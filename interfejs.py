@@ -19,13 +19,12 @@ def koloruj(przyjete,poprawnosc):
 def wyswietl():
     rozwiazanie = 0
     print(f"{"MasterMind":-^48}")
-    los = "1234" #losuj rozwiazanie()
-    ocena = "0012"
+    los = "1234" # createCombination()
     for i in range(1,8):
         print(f"[{i}] ", end="")
         urzytkownik = input("podaj: ")
         if len(urzytkownik)==4:
-            ocena="0012" # przypisz ocene(urzytkownik, los)
+            ocena="0012" # ocena(los,urzytkownik)
             if koloruj(urzytkownik,ocena):
                 rozwiazanie = i
                 break
